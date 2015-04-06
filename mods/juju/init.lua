@@ -30,43 +30,23 @@
 
 
 
-jujutable = {"whitejuju","blackjuju","pinkjuju","greenjuju","redjuju"}
+jujutable = {
+		{"whitejuju","famring:wheat"},
+	    	{"blackjuju","shamanmbos:rat"},
+	    	{"pinkjuju","default:nyancat_rainbow"},
+            	{"greenjuju","default:sapling"},
+	    	{"redjuju", "bucket:lava"}
+	}
 
-for v in pairs(jujutable) do
-	minetest.register_craftitem("juju:"..jujutable[v], {
-		description = jujutable[v],
-		inventory_image = jujutable[v]..".png",
+for i in ipairs(jujutable) do
+	local ingredient = jujutable[i][2]
+	local juju_type = jujutable[i][1]
+	minetest.register_craftitem("juju:"..juju_type, {
+		description = juju_type,
+		recipe = {
+			 {ingredient,ingredient,ingredient},
+		},
+		inventory_image = juju_type..".png",
 	})	
 end
 
-minetest.register_craft({
-	output = '"juju:blackjuju"',
-	recipe = {
-			{'"shamanmobs:rat"','"shamanmobs:rat"','"shamanmobs:rat"'},
-	},	
-})	
-	
-minetest.register_craft({
-	output = '"juju:pinkjuju"',
-	recipe = {
-		{'"default:nyancat_rainbow"','"default:nyancat_rainbow"','"default:nyancat_rainbow"'},
-	},
-})
-minetest.register_craft({
-	output = '"juju:whitejuju"',
-	recipe = {
-		{'"farming:wheat"','"farming:wheat"','"farming:wheat"'},
-	},
-})
-minetest.register_craft({
-	output = '"juju:redjuju"',
-	recipe = {
-		{'"bucket:bucket_lava"','"bucket:bucket_lava"','"bucket:bucket_lava"'},
-	},	
-})
-minetest.register_craft({
-	output = '"juju:greenjuju"',
-	recipe = {
-		{'"default:jungle_sapling"','"default:sapling"','"default:pine_sapling"'},
-	},
-})

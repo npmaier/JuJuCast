@@ -127,7 +127,7 @@ end
 minetest.register_abm({
 	nodenames = {"default:leaves"},
 	interval = 10.0,
-	chance = 8000,
+	chance = 80000,
 	action = function(pos, node)
 		minetest.env:add_entity({x=pos.x, y=pos.y + 1, z=pos.z}, "nyan_cats:small")
 	end,
