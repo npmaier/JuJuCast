@@ -31,7 +31,7 @@
 
 
 jujutable = {
-		{"whitejuju","famring:wheat"},
+		{"whitejuju","farming:wheat"},
 	    	{"blackjuju","shamanmbos:rat"},
 	    	{"pinkjuju","default:nyancat_rainbow"},
             	{"greenjuju","default:sapling"},
@@ -41,12 +41,15 @@ jujutable = {
 for i in ipairs(jujutable) do
 	local ingredient = jujutable[i][2]
 	local juju_type = jujutable[i][1]
-	minetest.register_craftitem("juju:"..juju_type, {
-		description = juju_type,
+	minetest.register_craft({
+		output = 'juju:'..juju_type,'2',
 		recipe = {
 			 {ingredient,ingredient,ingredient},
 		},
-		inventory_image = juju_type..".png",
-	})	
+	})
+	minetest.register_craftitem('juju:'..juju_type, {
+		description = juju_type,
+	inventory_image = juju_type..'.png',
+	})
 end
 
