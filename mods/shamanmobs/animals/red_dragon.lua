@@ -1,4 +1,5 @@
 shamanmobs:register_mob("shamanmobs:red_dragon", {
+	juju = Red,
 	name = "RedDragon",
 	type = "monster",
 	hp_max = 10,

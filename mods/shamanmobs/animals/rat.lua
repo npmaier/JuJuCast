@@ -1,6 +1,7 @@
 shamanmobs:register_mob("shamanmobs:rat", {
         type = "animal",
-        hp_max = 1,
+        juju = Black,`
+	hp_max = 1,
         collisionbox = {-0.2, -0.01, -0.2, 0.2, 0.2, 0.2},
         visual = "mesh",
         mesh = "shamanmobs_rat.x",

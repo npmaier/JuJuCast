@@ -1,4 +1,5 @@
 shamanmobs:register_mob("shamanmobs:green_saproling", {
+	juju = Green,
 	type = "monster",
 	follow = true,
 	hp_max = 5,
@@ -45,9 +46,3 @@ shamanmobs:register_mob("shamanmobs:green_saproling", {
 })
 shamanmobs:register_spawn{"shamanmobs:green_saproling", {"default:leaves", "default:jungleleaves"}, 3, -1, 7000, 3, 31000}
 
---minetest.register_craft({
---	output = "shamanmobs:green_saproling",
---	recipe = ({
---	i--	{'"shamanmobs:greenjuju"','"shamanmobs:greenjuju"','"shamanmobs:greenjuju"'},
---		},
---	})

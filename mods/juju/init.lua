@@ -67,6 +67,6 @@ minetest.register_craft({
 minetest.register_craft({
 	output = '"juju:greenjuju"',
 	recipe = {
-		{'"default:jungle_saplling"','"default:sapling"','"default:pine_sapling"'},
+		{'"default:jungle_sapling"','"default:sapling"','"default:pine_sapling"'},
 	},
 })

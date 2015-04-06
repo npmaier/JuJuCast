@@ -1,4 +1,5 @@
 shamanmobs:register_mob("shamanmobs:black_spider", {
+	juju = Black,
 	type = "monster",
 	view_range = 14, 
 	hp_max = 2,

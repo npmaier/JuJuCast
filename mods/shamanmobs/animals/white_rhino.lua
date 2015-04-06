@@ -1,4 +1,5 @@
 shamanmobs:register_mob("shamanmobs:white_rhino", {
+	juju = White,
 	type = "monster",
 	hp_max = 22,
 	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1.9, 0.4},

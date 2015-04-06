@@ -2,6 +2,7 @@
 --SHEEP
 --
 shamanmobs:register_mob("shamanmobs:sheep", {
+	juju = Pink,
 	jump = true,
 	attack_type = "dogfight",
 	damage = 2,

@@ -1,15 +1,16 @@
 local shaman_manifesting_eggs_list = {
-	{ "Red Dragon", "red_dragon", "default:lava"},
-	{ "White Rhino", "white_rhino", "farming:wheat_harvested"},	
-	{ "Black Spider", "black_spider", "default:bones"},
-	{ "Pink Swarm", "pink_swarm", "default:water"},
-	{ "Green Saproling", "green_saproling", "default:sapling"},
+	{ "Red Dragon", "red_dragon", "juju:redjuju"},
+	{ "White Rhino", "white_rhino", "juju:whitejuju"},	
+	{ "Black Spider", "black_spider", "juju:blackjuju"},
+	{ "Pink Swarm", "pink_swarm", "juju:pinkjuju"},
+	{ "Green Saproling", "green_saproling", "juju:greenjuju"},
 }
 
 for i in ipairs (shaman_manifesting_eggs_list) do 
 	local manifesting_egg_desc = shaman_manifesting_eggs_list[i][1]
 	local manifesting_eggtype = shaman_manifesting_eggs_list[i][2]
-	local ingredient = shaman_manifesting_eggs_list[i][3]
+	local juju = shaman_manifesting_eggs_list[i][3]
+	
 	
 	minetest.register_craftitem("shamanmanifestingeggs:"..manifesting_eggtype, {
 		description = manifesting_egg_desc,
@@ -39,8 +40,8 @@ for i in ipairs (shaman_manifesting_eggs_list) do
 	minetest.register_craft({
 		output = "shamanmanifestingeggs:"..manifesting_eggtype,
 		recipe = {
-	                {"shamanmanifestingeggs:egg", ingredient, ""},
-	                {"", "", ""},
+	                {"shamanmanifestingeggs:egg", juju,juju},
+	                {juju,juju,juju},
         	        {"", "", ""},
 	        },
 	})	

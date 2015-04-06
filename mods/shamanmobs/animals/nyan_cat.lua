@@ -2,6 +2,7 @@
 --NYAN CAT
 --
 shamanmobs:register_mob("shamanmobs:nyan_cat", {
+	juju = Pink,
 	jump = true,
 	follow = true,
 	attack_type = "dogfight",

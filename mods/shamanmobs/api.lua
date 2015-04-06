@@ -1,6 +1,7 @@
 shamanmobs = {}
 function shamanmobs:register_mob(name, def)
 	minetest.register_entity(name, {
+		juju = def.juju,
 		hp_max = def.hp_max,
 		physical = true,
 		collisionbox = def.collisionbox,
@@ -220,11 +221,13 @@ function shamanmobs:register_mob(name, def)
 					local s = self.object:getpos()
 					
 					local p = player:get_player_name()				
-					local c = self.object:get_entity_name()
+--					--local c = self.object.juju
 					local l = ctf.player(p).team	
+					local c = self.object:get_entity_name()
 					if l ~= "Pink"  and c == "shamanmobs:chicken" or l ~= "Pink" and c == "shamanmobs:cow" or l ~= "Pink" and c == "shamanmobs:pig" or l ~= "Pink" and c == "shamanmobs:nyan_cat" or l ~= "Pink" and c == "shamanmobs:rabbit" or l ~= "Pink" and c == "shamanmobs:sheep" or l ~= "Black" and c == "shamanmobs:black_spider" or l ~= "Green" and c == "shamanmobs:green_saproling" or l ~= "Red" and c == "shamanmobs:red_dragon" or l ~= "White" and c == "shamanmobs:white_rhino" then
+				--	if l ~= c then
 						local s = self.object:getpos()
-						local p = player:getpos()
+						local p	= player:getpos()
 						local dist = ((p.x-s.x)^2 + (p.y-s.y)^2 + (p.z-s.z)^2)^0.5
 						if dist < self.view_range then
 							if self.attack.dist then
@@ -239,9 +242,12 @@ function shamanmobs:register_mob(name, def)
 								self.attack.dist = dist
 							end
 						end
+					--elseif
+				--		 l == c then 
+					--	return
 					end
 				end
-			end		
+			end
 			if self.follow ~= "" and not self.following then
 				for _,player in pairs(minetest.get_connected_players()) do
 					local s = self.object:getpos()

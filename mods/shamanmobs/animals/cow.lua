@@ -2,6 +2,7 @@
 --COW
 --
 shamanmobs:register_mob("shamanmobs:cow", {
+	juju = Pink,
 	type = "monster",
 	jump = true,
 	damage = 1,

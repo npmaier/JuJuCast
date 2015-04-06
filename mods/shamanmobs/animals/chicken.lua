@@ -2,6 +2,7 @@
 --CHICKEN
 --
 shamanmobs:register_mob("shamanmobs:chicken", {
+	juju = Pink,
 	type = "monster",
 	attack_type = "dogfight",
 	hp_max = 1,

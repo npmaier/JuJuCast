@@ -2,6 +2,7 @@
 --PIG
 --
 shamanmobs:register_mob("shamanmobs:pig", {
+	juju = Pink,
 	jump = true,
 	attack_type = "dogfight",
 	damage = 3,

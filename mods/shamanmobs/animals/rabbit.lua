@@ -2,6 +2,7 @@
 --RABBIT
 --
 shamanmobs:register_mob("shamanmobs:rabbit", {
+	juju = Pink,
 	jump = true,
 	follow = true,
 	attack_type = "dogfight",
